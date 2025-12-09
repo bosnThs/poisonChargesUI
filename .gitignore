@@ -9,6 +9,7 @@
 build/
 vs*/
 lib/
+dist/
 
 # files
 *.zip
