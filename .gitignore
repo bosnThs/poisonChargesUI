@@ -4,11 +4,11 @@
 .vs/
 .vscode/
 .xmake/
-lib/
 
 # folders
 build/
 vs*/
+lib/
 
 # files
 *.zip

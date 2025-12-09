@@ -7,6 +7,6 @@ Built from https://github.com/libxse/commonlibsse-template
 
 ## Getting Started
 ```bat
-git clone https://github.com/bosnThs/simplePoisonStacker
+git clone https://github.com/bosnThs/poisonChargesUI
 git submodule update --init --recursive
 ```
