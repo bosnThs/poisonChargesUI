@@ -13,6 +13,7 @@ class Components.Meter
 	var meterDuration;
 	var MeterContainerBarColor;
 	var MaskWidth;
+	var idleTimer;
    function Meter(aContainer, aInvert)
    {
 	  this.MeterContainer = aContainer;
@@ -29,6 +30,7 @@ class Components.Meter
       this.oldPercent = 0;
       this.meterDuration = 200;
 		this.meterTime = 0;
+		this.idleTimer = 10000;
 	  
 	  
 		this.FadeOut = true;
@@ -44,6 +46,11 @@ class Components.Meter
 		this.MeterContainer._xscale = xscale;
 		this.MeterContainer._yscale = yscale;
 		this.MeterContainerBarColor.setRGB(abarColor);
+		
+		if (aCurrentTime > this.meterTime + this.idleTimer)
+		{
+			aFadeOut = true;
+		}
 		
 		if(this.FadeOut != aFadeOut)
 		{
