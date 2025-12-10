@@ -47,10 +47,10 @@ class Components.Meter
 		this.MeterContainer._yscale = yscale;
 		this.MeterContainerBarColor.setRGB(abarColor);
 		
-		if (aCurrentTime > this.meterTime + this.idleTimer)
-		{
-			aFadeOut = true;
-		}
+		//if (aCurrentTime > this.meterTime + this.idleTimer)
+		//{
+		//	aFadeOut = true;
+		//}
 		
 		if(this.FadeOut != aFadeOut)
 		{
