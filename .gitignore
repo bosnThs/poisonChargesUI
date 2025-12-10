@@ -8,7 +8,6 @@
 # folders
 build/
 vs*/
-lib/
 dist/
 
 # files
