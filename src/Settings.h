@@ -33,6 +33,7 @@ public:
 		widgetLeft_barGrowth = ini.GetBoolValue("settings", "bLeftWidgetInvertBar", false);
 
 		widget_barColor = (int)ini.GetDoubleValue("settings", "iWidgetBarColor", 0x9966ff);
+		widget_borderColor = (int)ini.GetDoubleValue("settings", "iWidgetBorderColor", 0xDCDCDC);
 		bReposition = ini.GetBoolValue("debug", "bReposition", true);
 	}
 	
@@ -54,6 +55,7 @@ public:
 	bool widgetLeft_barGrowth = false;
 
 	std::uint32_t widget_barColor{ 0x9966ff };
+	std::uint32_t widget_borderColor{ 0xDCDCDC };
 
 private:
 };

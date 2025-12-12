@@ -1,6 +1,5 @@
 class Components.Meter
 {
-	var Invert;
 	var Mask;
 	var Bar;
    var MeterContainer;
@@ -12,6 +11,7 @@ class Components.Meter
 	var meterTime;
 	var meterDuration;
 	var MeterContainerBarColor;
+	var MeterContainerBorderColor;
 	var MaskWidth;
 	var idleTimer;
    function Meter(aContainer, aInvert)
@@ -19,7 +19,7 @@ class Components.Meter
 	  this.MeterContainer = aContainer;
 	  this.Bar = aContainer.ChargeMeter_mc;
       this.MeterContainerBarColor = new Color(this.Bar.Bar);
-	  this.Invert = aInvert;
+      this.MeterContainerBorderColor = new Color(aContainer.Border.Color);
 	   
 	   this.MaskWidth = this.Bar.Mask._width
 		this.maxWidth = this.Bar.Mask._x;
@@ -38,7 +38,7 @@ class Components.Meter
 		this.FadeInterval = 1000;
 		this.MeterContainer._alpha = 0;
    }
-   function setPosition(xpos, ypos, rot, xscale, yscale, abarColor, aFadeOut, aCurrentTime)
+   function setPosition(xpos, ypos, rot, xscale, yscale, abarColor, aborderColor, aFadeOut, aCurrentTime)
    {
 		this.MeterContainer._x = xpos;
 		this.MeterContainer._y = ypos;
@@ -46,6 +46,7 @@ class Components.Meter
 		this.MeterContainer._xscale = xscale;
 		this.MeterContainer._yscale = yscale;
 		this.MeterContainerBarColor.setRGB(abarColor);
+		this.MeterContainerBorderColor.setRGB(aborderColor);
 		
 		//if (aCurrentTime > this.meterTime + this.idleTimer)
 		//{
