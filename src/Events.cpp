@@ -33,7 +33,7 @@ RE::BSEventNotifyControl MenuOpenCloseEventHandler::ProcessEvent(const RE::MenuO
 				poisonMeterMenu::Hide();
 			}
 		}
-		if (a_event->menuName == RE::TweenMenu::MENU_NAME) {
+		if (a_event->menuName == RE::TweenMenu::MENU_NAME || a_event->menuName == RE::LockpickingMenu::MENU_NAME) {
 			if (a_event->opening) 
 				poisonMeterMenu::Hide();
 			else 
