@@ -25,6 +25,17 @@ RE::BSEventNotifyControl MenuOpenCloseEventHandler::ProcessEvent(const RE::MenuO
 
 	// On HUD menu open/close - open/close the plugin's HUD menu
 	if (a_event) {
+		//if (a_event->menuName == RE::TweenMenu::MENU_NAME || a_event->menuName == RE::LockpickingMenu::MENU_NAME) {
+		//	if (a_event->opening) 
+		//		poisonMeterMenu::Hide();
+		//	else 
+		//		poisonMeterMenu::Show();
+		//}
+		if (a_event->opening && a_event->menuName != RE::FavoritesMenu::MENU_NAME)
+			poisonMeterMenu::want_visible = false;
+		else
+			poisonMeterMenu::want_visible = true;
+
 		if (a_event->menuName == RE::HUDMenu::MENU_NAME) {
 			if (a_event->opening) {
 				poisonMeterMenu::Show();
@@ -33,15 +44,9 @@ RE::BSEventNotifyControl MenuOpenCloseEventHandler::ProcessEvent(const RE::MenuO
 				poisonMeterMenu::Hide();
 			}
 		}
-		if (a_event->menuName == RE::TweenMenu::MENU_NAME || a_event->menuName == RE::LockpickingMenu::MENU_NAME) {
-			if (a_event->opening) 
-				poisonMeterMenu::Hide();
-			else 
-				poisonMeterMenu::Show();
-		}
-		if (a_event->menuName == RE::LoadingMenu::MENU_NAME && !a_event->opening) {
-			poisonMeterMenu::Show();
-		}
+		//if (a_event->menuName == RE::LoadingMenu::MENU_NAME && !a_event->opening) {
+		//	poisonMeterMenu::Show();
+		//}
 
 	}
 

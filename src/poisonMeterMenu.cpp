@@ -151,6 +151,13 @@ void poisonMeterMenu::Update(std::uint32_t a_currentTime)
 	if (!poisonMeter || !poisonMeter->uiMovie)
 		return;
 
+	if (!want_visible)
+	{
+		SetMenuVisibilityMode(MenuVisibilityMode::kHidden);
+		poisonMeter->uiMovie->Invoke("main.doHide", nullptr, nullptr, 0);
+		return;
+	}
+
 	SetMenuVisibilityMode(MenuVisibilityMode::kVisible);
 	poisonMeter->uiMovie->Invoke("main.doShow", nullptr, nullptr, 0);
 

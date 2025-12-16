@@ -40,11 +40,11 @@ class Components.Meter
    }
    function setPosition(xpos, ypos, rot, xscale, yscale, abarColor, aborderColor, aFadeOut, aCurrentTime)
    {
+		this.MeterContainer._xscale = xscale;
+		this.MeterContainer._yscale = yscale;
 		this.MeterContainer._x = xpos;
 		this.MeterContainer._y = ypos;
 		this.MeterContainer._rotation = rot;
-		this.MeterContainer._xscale = xscale;
-		this.MeterContainer._yscale = yscale;
 		this.MeterContainerBarColor.setRGB(abarColor);
 		this.MeterContainerBorderColor.setRGB(aborderColor);
 		
