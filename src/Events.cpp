@@ -44,9 +44,9 @@ RE::BSEventNotifyControl MenuOpenCloseEventHandler::ProcessEvent(const RE::MenuO
 				poisonMeterMenu::Hide();
 			}
 		}
-		//if (a_event->menuName == RE::LoadingMenu::MENU_NAME && !a_event->opening) {
-		//	poisonMeterMenu::Show();
-		//}
+		if (a_event->menuName == RE::LoadingMenu::MENU_NAME && !a_event->opening) {
+			poisonMeterMenu::Show();
+		}
 
 	}
 
