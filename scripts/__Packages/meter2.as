@@ -20,6 +20,7 @@ class Components.Meter
 	  this.Bar = aContainer.ChargeMeter_mc;
       this.MeterContainerBarColor = new Color(this.Bar.Bar);
       this.MeterContainerBorderColor = new Color(aContainer.Border.Color);
+      this.MeterContainerBGColor = new Color(aContainer.Border.BG);
 	   
 	   this.MaskWidth = this.Bar.Mask._width
 		this.maxWidth = this.Bar.Mask._x;
@@ -38,7 +39,7 @@ class Components.Meter
 		this.FadeInterval = 1000;
 		this.MeterContainer._alpha = 0;
    }
-   function setPosition(xpos, ypos, rot, xscale, yscale, abarColor, aborderColor, aFadeOut, aCurrentTime)
+   function setPosition(xpos, ypos, rot, xscale, yscale, abarColor, aborderColor, abgColor, aFadeOut, aCurrentTime)
    {
 		this.MeterContainer._xscale = xscale;
 		this.MeterContainer._yscale = yscale;
@@ -47,6 +48,7 @@ class Components.Meter
 		this.MeterContainer._rotation = rot;
 		this.MeterContainerBarColor.setRGB(abarColor);
 		this.MeterContainerBorderColor.setRGB(aborderColor);
+		this.MeterContainerBGColor.setRGB(abgColor);
 		
 		//if (aCurrentTime > this.meterTime + this.idleTimer)
 		//{

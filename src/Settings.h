@@ -34,6 +34,7 @@ public:
 
 		widget_barColor = (int)ini.GetDoubleValue("settings", "iWidgetBarColor", 0x9966ff);
 		widget_borderColor = (int)ini.GetDoubleValue("settings", "iWidgetBorderColor", 0xDCDCDC);
+		widget_bgColor = (int)ini.GetDoubleValue("settings", "iWidgetBGColor", 0x0A0A0A);
 		bReposition = ini.GetBoolValue("debug", "bReposition", true);
 	}
 	
@@ -56,6 +57,7 @@ public:
 
 	std::uint32_t widget_barColor{ 0x9966ff };
 	std::uint32_t widget_borderColor{ 0xDCDCDC };
+	std::uint32_t widget_bgColor{ 0x0A0A0A };
 
 private:
 };

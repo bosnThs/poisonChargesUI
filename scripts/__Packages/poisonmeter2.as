@@ -26,10 +26,10 @@ class PoisonMeter extends MovieClip
 		this._visible = true;
 	}
 	
-	function setPosition(xpos, ypos, rot, xscale, yscale, abarColor, aborderColor, abLeftHand, aFadeOut, aCurrentTime)
+	function setPosition(xpos, ypos, rot, xscale, yscale, abarColor, aborderColor, abgColor, abLeftHand, aFadeOut, aCurrentTime)
 	{
 		var _loc3_ = !abLeftHand ? this.RightChargeMeter : this.LeftChargeMeter;
-		_loc3_.setPosition(xpos, ypos, rot, xscale, yscale, abarColor, aborderColor, aFadeOut, aCurrentTime)   
+		_loc3_.setPosition(xpos, ypos, rot, xscale, yscale, abarColor, aborderColor, abgColor, aFadeOut, aCurrentTime)   
 	}
 	
    

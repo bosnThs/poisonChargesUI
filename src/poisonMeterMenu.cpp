@@ -97,6 +97,7 @@ void poisonMeterMenu::drawMeter(RE::GPtr<RE::IMenu> poisonMeter, bool a_leftHand
 	auto currentSettings = Settings::GetSingleton();
 	int barColor = currentSettings->widget_barColor;
 	int borderColor = currentSettings->widget_borderColor;
+	int bgColor = currentSettings->widget_bgColor;
 	bool barGrowth;
 	if (!a_leftHand)
 	{ 
@@ -130,12 +131,13 @@ void poisonMeterMenu::drawMeter(RE::GPtr<RE::IMenu> poisonMeter, bool a_leftHand
 	const RE::GFxValue widget_yscale = yScale * 100;
 	const RE::GFxValue widget_barColor = barColor;
 	const RE::GFxValue widget_borderColor = borderColor;
+	const RE::GFxValue widget_bgColor = bgColor;
 	const RE::GFxValue widget_barGrowth = barGrowth;
 	const RE::GFxValue widget_leftHand = a_leftHand;
 	const RE::GFxValue widget_fadeOut = fadeOut;
 	const RE::GFxValue widget_currentTime = a_currentTime;
-	RE::GFxValue posArray[10]{ widget_xpos, widget_ypos, widget_rotation, widget_xscale, widget_yscale, widget_barColor, widget_borderColor, widget_leftHand, widget_fadeOut, widget_currentTime };
-	poisonMeter->uiMovie->Invoke("main.setPosition", nullptr, posArray, 10);
+	RE::GFxValue posArray[11]{ widget_xpos, widget_ypos, widget_rotation, widget_xscale, widget_yscale, widget_barColor, widget_borderColor, widget_bgColor, widget_leftHand, widget_fadeOut, widget_currentTime };
+	poisonMeter->uiMovie->Invoke("main.setPosition", nullptr, posArray, 11);
 
 
 	const RE::GFxValue widget_fillPct = fillPct;
