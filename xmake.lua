@@ -6,7 +6,7 @@ includes("lib/commonlibsse-ng")
 
 -- set project
 set_project("poisonChargesUI")
-set_version("1.2.1")
+set_version("1.3.0")
 set_license("GPL-3.0")
 
 -- set defaults
